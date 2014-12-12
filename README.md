@@ -9,7 +9,7 @@ Requires at least: 2.3
 
 Tested up to: 3.91
 
-Stable tag: 2.1.5
+Stable tag: 2.1.7
 
 License: GPLv2
 
