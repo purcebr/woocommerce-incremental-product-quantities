@@ -46,8 +46,8 @@ function wpbo_get_applied_rule_obj( $product, $role = null ) {
 		$role = 'guest';
 	} else if ( $role == NULL ) {
 		$user_data = get_userdata( get_current_user_id() );
-		if ( $user_data->wp_capabilities ) {
-			foreach ( $user_data->wp_capabilities as $cap => $val ) {
+		if ( $user_data->roles ) {
+			foreach ( $user_data->roles as $cap => $val ) {
 				$role = $cap;
 			}
 		}
@@ -259,7 +259,7 @@ function wpbo_get_value_from_rule( $type, $product, $rule ) {
 		}
 		
 		if( isset( $options['ipq_site_step'] ) ) {
-			$step = $options['ipq_site_step'];			
+			$step = $options['ipq_site_step'];
 		} else {
 			$step = '';			
 		}
